@@ -17,10 +17,10 @@ class Word
   def self.all
     @@dictionary
   end
-  #
-  # def save
-  #   @@dictionary.push(self)
-  # end
+
+  def save
+    @@dictionary.push(self)
+  end
 
 
 end
