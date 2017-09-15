@@ -13,12 +13,13 @@ class Word
   end
 
   def self.all
-    @@dictionary
+    @@dictionary.keys.sort
   end
 
   def save
     @@dictionary[self.entry] = self
   end
+
 
 
 
