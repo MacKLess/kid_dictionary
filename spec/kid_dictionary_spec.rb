@@ -13,5 +13,9 @@ describe('Word') do
     end
   end
 
-  # describe('')
+  describe('.dictionary') do
+    it ("will have a readable dictionary list") do
+      expect(Word.all).to(be_a(Array))
+    end
+  end
 end
