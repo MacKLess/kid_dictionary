@@ -1,17 +1,15 @@
 require('pry')
 
 class Word
-  @@dictionary = []
+  @@dictionary = {}
   attr_accessor(:entry, :definition)
-  attr_reader(:id)
   def initialize (entry)
     @entry = entry
-    @id = @@dictionary.length + 1
-    @definition = definition
+    @definition = []
   end
 
   def self.clear
-    @@dictionary = []
+    @@dictionary = {}
   end
 
   def self.all
@@ -19,8 +17,9 @@ class Word
   end
 
   def save
-    @@dictionary.push(self)
+    @@dictionary[self.entry] = self
   end
+
 
 
 end
