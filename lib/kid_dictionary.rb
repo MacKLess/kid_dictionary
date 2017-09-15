@@ -20,8 +20,8 @@ class Word
     @@dictionary[self.entry] = self
   end
 
-  # def self.find(entry)
-  #   entry
-  #
+  def self.find(entry)
+    @@dictionary[entry]
+  end
 
 end

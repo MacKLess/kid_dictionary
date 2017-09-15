@@ -44,12 +44,12 @@ describe('Word') do
     end
   end
 
-  # describe('.find') do
-  #   it("finds an entry based on its entry") do
-  #     new_word.save
-  #     expect(Word.find(1)).to(eq(new_word))
-  #   end
-  # end
+  describe('.find') do
+    it("finds a dictionary entry based on its entry field") do
+      new_word.save
+      expect(Word.find("mordant")).to(eq(new_word))
+    end
+  end
 
 
 

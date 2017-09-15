@@ -16,7 +16,7 @@ post('/') do
 end
 
 get('/detail/:entry') do
-  "#{params[:entry]}"
+  @current_entry = Word.find(params[:entry]) #"#{params[:entry]}"
   erb(:detail)
 end
 
