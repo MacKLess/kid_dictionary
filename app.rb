@@ -20,10 +20,9 @@ get('/detail/:entry') do
   erb(:detail)
 end
 
-# post('/detail/:entry') do
-#   entry = params["entry"]
-#   definition = params["definition"]
-#   erb(:detail)
-#
-# end
-#
+post('/detail/:entry') do
+  @current_entry = Word.find(params[:entry])
+  # @current_entry = Word.find(params['new_entry'])
+  @current_entry.definition.push(params["new_definition"])
+  erb(:detail)
+end
