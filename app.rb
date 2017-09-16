@@ -22,7 +22,6 @@ end
 
 post('/detail/:entry') do
   @current_entry = Word.find(params[:entry])
-  # @current_entry = Word.find(params['new_entry'])
   @current_entry.definition.push(params["new_definition"])
   erb(:detail)
 end

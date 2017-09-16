@@ -19,5 +19,14 @@ describe("#submit_word", {:type => :feature}) do
     end
   end
 
+  describe('#submit_definition', {:type => :feature}) do
+    it("will add definitions to a dictionary entry") do
+      visit('/detail/mordant')
+      fill_in('new_definition', :with => 'a guy with big teeth')
+      click_button('Add!')
+      expect(page).to have_content('a guy with big teeth')
+    end
+  end
+
 
 end
